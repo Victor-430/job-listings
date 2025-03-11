@@ -3,7 +3,7 @@ import { JobWithAddFilterProp } from "../Types";
 export const Tablets = ({ job, addFilter }: JobWithAddFilterProp) => {
   return (
     <>
-      <div className="mt-4 font-bold text-DarkCyan sm:my-auto">
+      <div className="mt-4 font-bold text-DarkCyan lg:my-auto">
         <div className="flex flex-wrap gap-4">
           <p
             onClick={() => addFilter(job.role)}

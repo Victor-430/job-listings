@@ -14,9 +14,6 @@ export default {
         GrayishCyan: "hsl(180, 8%, 52%)",
         DarkGrayishCyan: "hsl(180, 14%, 20%)",
       },
-      maxWidth: {
-        sm: "22rem",
-      },
     },
   },
   plugins: [],

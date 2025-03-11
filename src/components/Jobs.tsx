@@ -73,14 +73,8 @@ export const Jobs = () => {
 
   return (
     <>
-      {filteredJobs.length === 0 && (
-        <div className="p-10 text-center">
-          No jobs match your selected filters
-        </div>
-      )}
-
       {selectedFilters.length > 0 && (
-        <div className="pb-28 lg:pb-0">
+        <div className="pb-24 sm:pb-16 md:pb-8 lg:pb-0">
           <FilterListings
             selectedFilters={selectedFilters}
             removeFilter={removeFilter}
@@ -89,9 +83,7 @@ export const Jobs = () => {
         </div>
       )}
 
-      <div
-        className={`grid grid-cols-1 gap-16 sm:gap-12 ${selectedFilters.length > 0} ? "" : ""`}
-      >
+      <div className="grid grid-cols-1 gap-16 sm:gap-12">
         {filteredJobs.map((job) => (
           <Job key={job.id} job={job} addFilter={addFilter} />
         ))}

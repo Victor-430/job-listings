@@ -8,7 +8,7 @@ export const Job = ({ job, addFilter }: JobWithAddFilterProp) => {
 
   return (
     <div
-      className={`${featuredClassName} relative mx-auto w-[22rem] gap-8 rounded-md bg-white px-6 pb-8 pt-16 shadow-lg shadow-DarkCyan first:mt-52 last:mb-8 sm:grid sm:w-[90%] sm:grid-cols-2 sm:pt-8`}
+      className={`${featuredClassName} relative mx-auto w-[22rem] gap-8 rounded-md bg-white px-6 pb-8 pt-16 shadow-lg shadow-DarkCyan first:mt-52 last:mb-8 sm:w-[90%] sm:pt-8 lg:grid lg:grid-cols-2`}
     >
       <div className="sm:flex sm:flex-none sm:items-center sm:gap-4">
         <div className="absolute top-0 shrink-0 -translate-y-1/2 transform rounded-full sm:relative sm:translate-y-0">
@@ -32,10 +32,10 @@ export const Job = ({ job, addFilter }: JobWithAddFilterProp) => {
             </div>
           </span>
 
-          <h1 className="mb-3 mt-3 cursor-pointer font-bold text-DarkGrayishCyan sm:mb-1 sm:mt-1">
+          <h1 className="mb-3 mt-3 cursor-pointer font-bold text-DarkGrayishCyan lg:mb-1 lg:mt-1">
             {job.position}
           </h1>
-          <span className="mb-6 flex items-center space-x-3 text-GrayishCyan sm:mb-0 sm:mt-0">
+          <span className="mb-6 flex items-center space-x-3 text-GrayishCyan lg:mb-0 lg:mt-0">
             <p>{job.postedAt} </p>
             <span className="h-1 w-1 rounded-full bg-GrayishCyan" />
             <p>{job.contract}</p>
@@ -45,6 +45,7 @@ export const Job = ({ job, addFilter }: JobWithAddFilterProp) => {
           <hr className="sm:hidden" />
         </div>
       </div>
+      <hr className="hidden sm:block lg:hidden" />
       <Tablets key={job.id} job={job} addFilter={addFilter} />
     </div>
   );

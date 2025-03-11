@@ -12,10 +12,10 @@ export const RootLayout = createBrowserRouter([
         index: true,
         element: <Jobs />,
       },
-      {
-        path: "*",
-        element: <PageNotFound />,
-      },
     ],
+  },
+  {
+    path: "*",
+    element: <PageNotFound />,
   },
 ]);
